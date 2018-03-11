@@ -22,7 +22,7 @@ def publish():
     return "publish fail"
 
 
-@app.route('/jobs')
+@app.route('/jobs', methods=['GET'])
 def get_job_list():
     job_list = []
     # TODO: json support
