@@ -5,6 +5,7 @@ from job_util import *
 from shuashou import Shuashou
 from job import Job
 from shop_store import ShopStore
+import uuid
 
 app = Flask(__name__)
 
@@ -16,10 +17,18 @@ def hello_world():
 
 
 @app.route('/jobs', methods=['GET'])
-def job_list():
-    job_list = get_job_list(conn)
-    # TODO: json support
-    return str(job_list)
+def get_job_list():
+    job_list = retrieve_job_list(conn)
+    job_list_str = [str(job) for job in job_list]
+    return str(job_list_str)
+
+
+@app.route('/userjobs', methods=['GET'])
+def get_user_job_list():
+    wangwang_id = request.args.get('wangwang_id')
+    job_list = retrieve_user_job_list(conn, wangwang_id)
+    job_list_str = [str(job) for job in job_list]
+    return str(job_list_str)
 
 
 @app.route('/take', methods=['POST'])
@@ -34,7 +43,17 @@ def take_job():
 def submit_job():
     if request.method == 'POST':
         # TODO: add more vars
-        if valid_submit_job(conn, request.form['wangwang_id'], request.form['job_id']):
+        confirm_img_srcs = [request.form['confirm_img_src']]
+        if valid_submit_job(conn, request.form['wangwang_id'], request.form['job_id'], confirm_img_srcs):
+            return "success"
+    return "submit job fail"
+
+
+@app.route('/approve', methods=['POST'])
+def approve_job():
+    if request.method == 'POST':
+        # TODO: add more vars
+        if valid_approve_job(conn, request.form['wangwang_id'], request.form['job_id']):
             return "success"
     return "submit job fail"
 
@@ -45,7 +64,8 @@ def publish_job():
         # TODO: add more vars
         new_job = Job()
         new_job.store_id = request.form['store_id']
-        new_job.job_id = "job_id"
+        new_job.item_id = request.form['item_id']
+        new_job.job_id = str(uuid.uuid4())
         if valid_publish(conn, new_job):
             return "success"
     return "publish fail"

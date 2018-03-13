@@ -1,11 +1,10 @@
-default_balance = 0
-default_salary_balance = 0
+default_str = "default"
 
 
 class ShopStore:
     def __init__(self):
-        self.store_id = "id"
-        self.balance = ""
-        self.salary_balance = ""
-        self.public_jobs = "[]"
-        self.finished_jobs = "[]"
+        self.store_id = default_str
+        self.balance = default_str
+        self.salary_balance = default_str
+        self.public_jobs = default_str
+        self.finished_jobs = default_str
