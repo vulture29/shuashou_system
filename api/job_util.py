@@ -1,4 +1,4 @@
-from job import Job
+from api.job import Job
 
 
 def construct_job(row):

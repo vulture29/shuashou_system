@@ -1,10 +1,11 @@
 from flask import Flask
 from flask import request
+from flask import render_template
 import sqlite3
-from job_util import *
-from shuashou import Shuashou
-from job import Job
-from shop_store import ShopStore
+from api.job_util import *
+from api.shuashou import Shuashou
+from api.job import Job
+from api.shop_store import ShopStore
 import uuid
 
 app = Flask(__name__)
@@ -13,17 +14,21 @@ conn = sqlite3.connect('job_database.db')
 
 @app.route('/')
 def hello_world():
-        return 'Hello, World!'
+    return 'Hello, World!'
+
+@app.route('/jobs')
+def render_job_list():
+    return render_template('job.html')
 
 
-@app.route('/jobs', methods=['GET'])
+@app.route('/api/v1/jobs', methods=['GET'])
 def get_job_list():
     job_list = retrieve_job_list(conn)
     job_list_str = [str(job) for job in job_list]
     return str(job_list_str)
 
 
-@app.route('/userjobs', methods=['GET'])
+@app.route('/api/v1/userjobs', methods=['GET'])
 def get_user_job_list():
     wangwang_id = request.args.get('wangwang_id')
     job_list = retrieve_user_job_list(conn, wangwang_id)
@@ -31,7 +36,7 @@ def get_user_job_list():
     return str(job_list_str)
 
 
-@app.route('/take', methods=['POST'])
+@app.route('/api/v1/take', methods=['POST'])
 def take_job():
     if request.method == 'POST':
         if valid_take_job(conn, request.form['wangwang_id'], request.form['job_id']):
@@ -39,7 +44,7 @@ def take_job():
     return "take job fail"
 
 
-@app.route('/submit', methods=['POST'])
+@app.route('/api/v1/submit', methods=['POST'])
 def submit_job():
     if request.method == 'POST':
         # TODO: add more vars
@@ -49,7 +54,7 @@ def submit_job():
     return "submit job fail"
 
 
-@app.route('/approve', methods=['POST'])
+@app.route('/api/v1/approve', methods=['POST'])
 def approve_job():
     if request.method == 'POST':
         # TODO: add more vars
@@ -58,7 +63,7 @@ def approve_job():
     return "submit job fail"
 
 
-@app.route('/publish', methods=['POST'])
+@app.route('/api/v1/publish', methods=['POST'])
 def publish_job():
     if request.method == 'POST':
         # TODO: add more vars
@@ -71,7 +76,7 @@ def publish_job():
     return "publish fail"
 
 
-@app.route('/add_shuashou', methods=['POST'])
+@app.route('/api/v1/add_shuashou', methods=['POST'])
 def add_shuashou():
     if request.method == 'POST':
         # TODO: add more vars
@@ -82,7 +87,7 @@ def add_shuashou():
     return "add shuashou fail"
 
 
-@app.route('/add_shop_store', methods=['POST'])
+@app.route('/api/v1/add_shop_store', methods=['POST'])
 def add_shop_store():
     if request.method == 'POST':
         # TODO: add more vars
