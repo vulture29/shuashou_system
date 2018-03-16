@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Job Detail</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div id="app">
+		<div class="container">
+	  		<h2>宝贝ID: {{ job_detail.item_id }}</h2>
+			<div class="panel-group">
+			  <div class="panel panel-primary">
+			  	<div class="panel-heading">店铺ID</div>
+			    <div class="panel-body">{{ job_detail.store_id }}</div>
+			  </div>
+			  <div class="panel panel-primary">
+			  	<div class="panel-heading">主图</div>
+			    <div class="panel-body">{{ job_detail.main_img_src }}</div>
+			  </div>
+			  <div class="panel panel-primary">
+			  	<div class="panel-heading">打标淘口令</div>
+			    <div class="panel-body">{{ job_detail.tao_key }}</div>
+			  </div>
+			  <div class="panel panel-primary">
+			  	<div class="panel-heading">搜索关键词</div>
+			    <div class="panel-body">{{ job_detail.keyword }}</div>
+			  </div>
+			  <div class="panel panel-primary">
+			  	<div class="panel-heading">货比三家</div>
+			    <div class="panel-body">{{ job_detail.compare_img_src }}</div>
+			  </div>
+			  <div class="panel panel-primary">
+			  	<div class="panel-heading">下单SKU</div>
+			    <div class="panel-body">{{ job_detail.sku }}</div>
+			  </div>
+			  <div class="panel panel-primary">
+			  	<div class="panel-heading">付款金额</div>
+			    <div class="panel-body">{{ job_detail.pay_amount }}</div>
+			  </div>
+			  <div class="panel panel-primary">
+			  	<div class="panel-heading">任务数量</div>
+			    <div class="panel-body">{{ job_detail.task_amount }}</div>
+			  </div>
+			  <div class="panel panel-primary">
+			  	<div class="panel-heading">参考聊天问题</div>
+			    <div class="panel-body">{{ job_detail.chat_questions }}</div>
+			  </div>
+			  <div class="panel panel-primary">
+			  	<div class="panel-heading">评价</div>
+			    <div class="panel-body">{{ job_detail.comments }}</div>
+			  </div>
+			  <div class="panel panel-primary">
+			  	<div class="panel-heading">晒图</div>
+			    <div class="panel-body">{{ job_detail.comment_img_src }}</div>
+			  </div>
+			  <div class="panel panel-primary">
+			  	<div class="panel-heading">任务佣金</div>
+			    <div class="panel-body">{{ job_detail.salary }}</div>
+			  </div>
+			</div>
+		</div>
+		<br><br>
+		<center><button type="button" class="btn btn-primary btn-lg" onclick="takeJob()">接受任务</button></center>
+		<br><br><br><br>
+	</div>
+	<script>
+		function takeJob() {
+		    var wangwang_id = prompt("请输入你的旺旺ID:");
+		    if (wangwang_id != null && wangwang_id != "") {
+		        var jobid = "<%= job_id %>";
+		        $.post("http://localhost:5000/api/v1/take",
+		        {
+		          wangwang_id: wangwang_id,
+		          job_id: job_id
+		        }, function(data, status){
+			        alert("Data: " + data + "\nStatus: " + status);
+			    });
+		    }
+		}
+	</script>
+
+	<script src="../../js/vue.min.js"></script>
+	<script src="../../js/vue-resource.min.js"></script>
+
+	<script>
+		
+		var job_id = "<%= job_id %>";
+		var link = 'http://localhost:5000/api/v1/job/' + job_id;
+		new Vue ({
+		    el: '#app',
+		    data: {
+		        job_detail: '123',
+		    },
+		    methods:{
+		        getJobDetail: function(){
+		            var res = this.$http.get(link).then(response => {
+		            	this.job_detail = JSON.parse(response.bodyText);
+                    });
+		        }
+		    },
+		    created: function () {
+		        this.getJobDetail();
+		    }
+		});
+	</script>
+
+</body>
+</html>
+	
+</script>

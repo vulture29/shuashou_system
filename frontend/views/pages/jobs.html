@@ -20,12 +20,8 @@
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <!--===============================================================================================-->
-	
-
 </head>
-
 <body>
-	
 	<div class="limiter">
 		<div class="container-table100">
 			<div class="wrap-table100">
@@ -34,17 +30,18 @@
 						<table>
 							<thead>
 								<tr class="table100-head">
-									<th class="column">序号</th>
+									<th class="column1">序号</th>
 									<th class="column2">发布时间</th>
 									<th class="column3">物品</th>
 									<th class="column4">店家</th>
 									<th class="column5">付款金额</th>
 									<th class="column6">任务数量</th>
-									<th class="column7">任务佣金</th>
+									<th class="column6">任务佣金</th>
+									<th class="column6"></th>
 								</tr>
 							</thead>
                             <tbody>
-                            	<tr v-for = "(job, index) in jobs">
+                            	<tr v-for = "(job, index) in jobs" >
                                     <td class="column1">{{ index }}</td>
                                     <td class="column2">{{ job.item_id }}</td>
                                     <td class="column3">{{ job.item_id }}</td>
@@ -52,6 +49,7 @@
                                     <td class="column5">{{ job.pay_amount }}</td>
                                     <td class="column6">{{ job.task_amount }}</td>
                                     <td class="column6">{{ job.salary }}</td>
+                                    <td class="column6"><a :href="'/job/' + job.job_id"><button type="button" class="btn btn-success">查看详情</button></a></td>
                                 </tr>
                             </tbody>
 						</table>
@@ -60,9 +58,6 @@
 			</div>
 		</div>
 	</div>
-<!--===============================================================================================-->
-	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-<!--===============================================================================================-->
     
 <!--===============================================================================================-->	
 	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
@@ -86,16 +81,12 @@
 		    },
 		    methods:{
 		        getJobs: function(){
-		        	console.log("start query")
 		            var res = this.$http.get(link).then(response => {
-		            	console.log(response)
 		            	this.jobs = JSON.parse(response.bodyText);
                     });
-                    console.log(res)
-		            console.log("exit query");
 		        }
 		    },
-		    mounted: function () {
+		    created: function () {
 		        this.getJobs();
 		    }
 		});

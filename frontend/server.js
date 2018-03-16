@@ -13,8 +13,24 @@ app.get('/',function(req,res){
   res.render('pages/index');
 });
 
-app.get('/job',function(req,res){
-  res.render('pages/job');
+app.get('/jobs',function(req,res){
+  res.render('pages/jobs');
+});
+
+app.get('/job/:job_id',function(req,res){
+  res.render('pages/job_detail', {job_id: req.params.job_id});
+});
+
+app.get('/userjobs/:wangwang_id',function(req,res){
+  res.render('pages/userjobs', {wangwang_id: req.params.wangwang_id});
+});
+
+app.get('/submitjob/:job_id',function(req,res){
+  res.render('pages/submit_job', {job_id: req.params.job_id});
+});
+
+app.get('/publish',function(req,res){
+  res.render('pages/publish_job');
 });
 
 

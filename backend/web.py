@@ -13,11 +13,19 @@ from json import *
 app = Flask(__name__)
 CORS(app)
 
-conn = sqlite3.connect('/Users/xingyao/Documents/Vulture/study/shuadan/backend/job_database.db')
+conn = sqlite3.connect('job_database.db')
 
 @app.route('/')
 def hello_world():
     return 'Hello, World!'
+
+
+@app.route('/api/v1/job/<job_id>')
+def get_one_job(job_id):
+    job = retrieve_job(conn, job_id)
+    if len(job) == 1:
+        return str(JSONEncoder().encode(job[0].get_map()))
+    return ""
 
 
 @app.route('/api/v1/jobs', methods=['GET'])
@@ -48,7 +56,7 @@ def submit_job():
     if request.method == 'POST':
         # TODO: add more vars
         confirm_img_srcs = [request.form['confirm_img_src']]
-        if valid_submit_job(conn, request.form['wangwang_id'], request.form['job_id'], confirm_img_srcs):
+        if valid_submit_job(conn, request.form['job_id'], confirm_img_srcs):
             return "success"
     return "submit job fail"
 

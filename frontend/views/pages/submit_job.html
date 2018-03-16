@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Job Detail</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div id="app">
+		<div class="form-group">
+		  <label for="comment">上传图片</label>
+		  <textarea class="form-control" rows="5" id="confirm_img_src"></textarea>
+		</div>
+
+		<br><br>
+		<center><button type="button" class="btn btn-primary btn-lg" onclick="submitJob()">提交任务</button></center>
+		<br><br><br><br>
+	</div>
+
+	<script>
+		function submitJob() {
+	    	var job_id = "<%= job_id %>";
+	        $.post("http://localhost:5000/api/v1/submit",
+	        {
+	          job_id: job_id,
+	          confirm_img_src: "default"
+	        }, function(data, status){
+		        alert("Data: " + data + "\nStatus: " + status);
+		    });
+	   
+		}
+	</script>
+
+</body>
+</html>
+	
+</script>

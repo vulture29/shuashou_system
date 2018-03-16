@@ -22,6 +22,14 @@ def construct_job(row):
     return job
 
 
+def retrieve_job(conn, job_id):
+    cur = conn.cursor()
+    cur.execute('SELECT * FROM job WHERE job_id=? AND status="published"', (job_id, ))
+    rows = cur.fetchall()
+    cur.close()
+    return [construct_job(row) for row in rows]
+
+
 def retrieve_job_list(conn):
     cur = conn.cursor()
     cur.execute('SELECT * FROM job WHERE status="published"')
@@ -47,11 +55,11 @@ def valid_take_job(conn, wangwang_id, job_id):
     return True
 
 
-def valid_submit_job(conn, wangwang_id, job_id, confirm_img_srcs):
+def valid_submit_job(conn, job_id, confirm_img_srcs):
     print("image src: " + str(confirm_img_srcs))
     cur = conn.cursor()
-    cur.execute('UPDATE job SET status = "submitted", assign = ? WHERE job_id = ?',
-                (wangwang_id, job_id))
+    cur.execute('UPDATE job SET status = "submitted" WHERE job_id = ?',
+                (job_id,))
     conn.commit()
     cur.close()
     return True

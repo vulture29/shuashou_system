@@ -2,93 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f2065f0b-e347-486b-939d-25f1aa5993e3" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/api/README.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/api/create_table.sql" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/api/job.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/api/job_util.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/api/shop_store.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/api/shuashou.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/hello.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/job_database.db" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/css/main.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/css/util.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/OpenSans/OpenSans-Bold.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/OpenSans/OpenSans-BoldItalic.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/OpenSans/OpenSans-ExtraBold.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/OpenSans/OpenSans-ExtraBoldItalic.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/OpenSans/OpenSans-Italic.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/OpenSans/OpenSans-Light.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/OpenSans/OpenSans-LightItalic.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/OpenSans/OpenSans-Regular.otf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/OpenSans/OpenSans-Regular.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/OpenSans/OpenSans-SemiBold.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/OpenSans/OpenSans-SemiBoldItalic.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/font-awesome-4.7.0/HELP-US-OUT.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/font-awesome-4.7.0/css/font-awesome.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/font-awesome-4.7.0/css/font-awesome.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/font-awesome-4.7.0/fonts/FontAwesome.otf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/font-awesome-4.7.0/less/animated.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/font-awesome-4.7.0/less/bordered-pulled.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/font-awesome-4.7.0/less/core.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/font-awesome-4.7.0/less/fixed-width.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/font-awesome-4.7.0/less/font-awesome.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/font-awesome-4.7.0/less/icons.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/font-awesome-4.7.0/less/larger.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/font-awesome-4.7.0/less/list.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/font-awesome-4.7.0/less/mixins.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/font-awesome-4.7.0/less/path.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/font-awesome-4.7.0/less/rotated-flipped.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/font-awesome-4.7.0/less/screen-reader.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/font-awesome-4.7.0/less/stacked.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/font-awesome-4.7.0/less/variables.less" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/font-awesome-4.7.0/scss/_animated.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/font-awesome-4.7.0/scss/_bordered-pulled.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/font-awesome-4.7.0/scss/_core.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/font-awesome-4.7.0/scss/_fixed-width.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/font-awesome-4.7.0/scss/_icons.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/font-awesome-4.7.0/scss/_larger.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/font-awesome-4.7.0/scss/_list.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/font-awesome-4.7.0/scss/_mixins.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/font-awesome-4.7.0/scss/_path.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/font-awesome-4.7.0/scss/_rotated-flipped.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/font-awesome-4.7.0/scss/_screen-reader.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/font-awesome-4.7.0/scss/_stacked.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/font-awesome-4.7.0/scss/_variables.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/fonts/font-awesome-4.7.0/scss/font-awesome.scss" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/images/icons/favicon.ico" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/js/main.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/animate/animate.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/bootstrap/css/bootstrap-grid.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/bootstrap/css/bootstrap-grid.css.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/bootstrap/css/bootstrap-grid.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/bootstrap/css/bootstrap-grid.min.css.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/bootstrap/css/bootstrap-reboot.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/bootstrap/css/bootstrap-reboot.css.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/bootstrap/css/bootstrap-reboot.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/bootstrap/css/bootstrap-reboot.min.css.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/bootstrap/css/bootstrap.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/bootstrap/css/bootstrap.css.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/bootstrap/css/bootstrap.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/bootstrap/css/bootstrap.min.css.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/bootstrap/js/bootstrap.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/bootstrap/js/bootstrap.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/bootstrap/js/popper.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/bootstrap/js/popper.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/bootstrap/js/tooltip.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/jquery/jquery-3.2.1.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/perfect-scrollbar/perfect-scrollbar.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/perfect-scrollbar/perfect-scrollbar.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/select2/select2.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/select2/select2.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/select2/select2.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/static/vendor/select2/select2.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/templates/job.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/frontend/Script/css/main.css" afterPath="$PROJECT_DIR$/frontend/Script/css/main.css" />
+      <change beforePath="$PROJECT_DIR$/frontend/Script/js/main.js" afterPath="$PROJECT_DIR$/frontend/Script/js/main.js" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/css/main.css" afterPath="$PROJECT_DIR$/frontend/public/css/main.css" />
+      <change beforePath="$PROJECT_DIR$/frontend/server.js" afterPath="$PROJECT_DIR$/frontend/server.js" />
+      <change beforePath="$PROJECT_DIR$/frontend/views/pages/job.html" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -101,7 +19,20 @@
     <SUITE FILE_PATH="coverage/shuadan$shuadan.coverage" NAME="shuadan Coverage Results" MODIFIED="1521130191510" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="web.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/backend/web.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="24" column="20" lean-forward="true" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+              <folding>
+                <element signature="e#0#23#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -172,8 +103,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -257,17 +188,17 @@
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32993197" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23565324" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23809524" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38638857" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38638857" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -304,7 +235,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/job_util.py" />
     <entry file="file://$PROJECT_DIR$/create_table.sql" />
     <entry file="file://$PROJECT_DIR$/shuashou.py" />
     <entry file="file://$PROJECT_DIR$/job.py" />
@@ -367,5 +297,15 @@
     <entry file="file://$PROJECT_DIR$/api/job.py" />
     <entry file="file://$PROJECT_DIR$/web.py" />
     <entry file="file://$PROJECT_DIR$/frontend/server.py" />
+    <entry file="file://$PROJECT_DIR$/backend/web.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="20" lean-forward="true" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>
