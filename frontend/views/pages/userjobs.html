@@ -43,7 +43,15 @@
                                     <td class="column2">{{ job.item_id }}</td>
                                     <td class="column3">{{ job.item_id }}</td>
                                     <td class="column4">{{ job.store_id }}</td>
-                                    <td class="column6"><a :href="'/submitjob/' + job.job_id"><button type="button" class="btn btn-success">提交任务</button></a></td>
+                                    <!-- <td class="column6"><a :href="'/submitjob/' + job.job_id"><button type="button" class="btn btn-success">提交任务</button></a></td> -->
+                                    <td class="column6">
+                                    	<div v-if="job.status === 'submitted'">
+								          <a :href="'/submitjob/' + job.job_id"><button type="button" class="btn btn-success">修改任务</button></a>
+								        </div>
+								        <div v-else>
+								        	<a :href="'/submitjob/' + job.job_id"><button type="button" class="btn btn-success">提交任务</button></a>
+								        </div>
+								    </td>
                                 </tr>
                             </tbody>
 						</table>
