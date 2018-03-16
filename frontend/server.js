@@ -21,6 +21,14 @@ app.get('/job/:job_id',function(req,res){
   res.render('pages/job_detail', {job_id: req.params.job_id});
 });
 
+app.get('/checkjobs',function(req,res){
+  res.render('pages/checkjobs');
+});
+
+app.get('/checkjob/:job_id',function(req,res){
+  res.render('pages/checkjob_detail', {job_id: req.params.job_id});
+});
+
 app.get('/userjobs/:wangwang_id',function(req,res){
   res.render('pages/userjobs', {wangwang_id: req.params.wangwang_id});
 });

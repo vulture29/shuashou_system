@@ -23,7 +23,7 @@
 	<script>
 		function submitJob() {
 	    	var job_id = "<%= job_id %>";
-	        $.post("http://localhost:5000/api/v1/submit",
+	        $.post("http://54.186.228.241:10080/api/v1/submit",
 	        {
 	          job_id: job_id,
 	          confirm_img_src: "default"

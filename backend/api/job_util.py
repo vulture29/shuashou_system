@@ -38,6 +38,14 @@ def retrieve_job_list(conn):
     return [construct_job(row) for row in rows]
 
 
+def retrieve_submitted_job_list(conn):
+    cur = conn.cursor()
+    cur.execute('SELECT * FROM job WHERE status="submitted"')
+    rows = cur.fetchall()
+    cur.close()
+    return [construct_job(row) for row in rows]
+
+
 def retrieve_user_job_list(conn, wangwang_id):
     cur = conn.cursor()
     cur.execute('SELECT * FROM job WHERE (status="assigned" OR status="submitted") AND assign = ?', (wangwang_id,))
@@ -56,19 +64,18 @@ def valid_take_job(conn, wangwang_id, job_id):
 
 
 def valid_submit_job(conn, job_id, confirm_img_srcs):
-    print("image src: " + str(confirm_img_srcs))
     cur = conn.cursor()
-    cur.execute('UPDATE job SET status = "submitted" WHERE job_id = ?',
-                (job_id,))
+    cur.execute('UPDATE job SET status = "submitted", confirm_img_srcs = ? WHERE job_id = ?',
+                (confirm_img_srcs, job_id,))
     conn.commit()
     cur.close()
     return True
 
 
-def valid_approve_job(conn, wangwang_id, job_id):
+def valid_approve_job(conn, job_id):
     cur = conn.cursor()
-    cur.execute('UPDATE job SET status = "approved", assign = ? WHERE job_id = ?',
-                (wangwang_id, job_id))
+    cur.execute('UPDATE job SET status = "approved" WHERE job_id = ?',
+                (job_id,))
     conn.commit()
     cur.close()
     return True

@@ -43,6 +43,13 @@ def get_user_job_list():
     return str(JSONEncoder().encode(job_list_map))
 
 
+@app.route('/api/v1/submitted_jobs', methods=['GET'])
+def get_submitted_job_list():
+    job_list = retrieve_submitted_job_list(conn)
+    job_list_map = [job.get_map() for job in job_list]
+    return str(JSONEncoder().encode(job_list_map))
+
+
 @app.route('/api/v1/take', methods=['POST'])
 def take_job():
     if request.method == 'POST':
@@ -65,7 +72,7 @@ def submit_job():
 def approve_job():
     if request.method == 'POST':
         # TODO: add more vars
-        if valid_approve_job(conn, request.form['wangwang_id'], request.form['job_id']):
+        if valid_approve_job(conn, request.form['job_id']):
             return "success"
     return "submit job fail"
 
@@ -106,4 +113,4 @@ def add_shop_store():
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0',port=10080)

@@ -72,7 +72,7 @@
 		    var wangwang_id = prompt("请输入你的旺旺ID:");
 		    if (wangwang_id != null && wangwang_id != "") {
 		        var jobid = "<%= job_id %>";
-		        $.post("http://localhost:5000/api/v1/take",
+		        $.post("http://54.186.228.241:10080/api/v1/take",
 		        {
 		          wangwang_id: wangwang_id,
 		          job_id: job_id
@@ -89,7 +89,7 @@
 	<script>
 		
 		var job_id = "<%= job_id %>";
-		var link = 'http://localhost:5000/api/v1/job/' + job_id;
+		var link = 'http://54.186.228.241:10080/api/v1/job/' + job_id;
 		new Vue ({
 		    el: '#app',
 		    data: {

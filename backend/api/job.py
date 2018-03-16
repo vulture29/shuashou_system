@@ -1,4 +1,3 @@
-from json import *
 
 default_str = "default"
 
@@ -21,6 +20,8 @@ class Job:
         self.salary = default_str
         self.status = "published"
         self.assign = default_str
+        self.assign = default_str
+        self.confirm_img_srcs = default_str
 
     def get_map(self):
         job_map = {}
@@ -40,4 +41,5 @@ class Job:
         job_map["salary"] = self.salary
         job_map["status"] = self.status
         job_map["assign"] = self.assign
+        job_map["confirm_img_srcs"] = self.confirm_img_srcs
         return job_map

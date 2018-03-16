@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Job Detail</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div id="app">
+		<div class="container">
+	  		<h2>宝贝ID: {{ job_detail.item_id }}</h2>
+			<div class="panel-group">
+			  <div class="panel panel-primary">
+			  	<div class="panel-heading">确认图片</div>
+			    <div class="panel-body">{{ job_detail.confirm_img_srcs }}</div>
+			  </div>
+			</div>
+		</div>
+		<br><br>
+		<center><button type="button" class="btn btn-primary btn-lg" onclick="approveJob()">确认任务</button></center>
+		<br><br><br><br>
+	</div>
+	<script>
+		function approveJob() {
+	    	var jobid = "<%= job_id %>";
+	        $.post("http://54.186.228.241:10080/api/v1/approve",
+	        {
+	          job_id: job_id
+	        }, function(data, status){
+		        alert("Data: " + data + "\nStatus: " + status);
+		    });
+		}
+	</script>
+
+	<script src="../../js/vue.min.js"></script>
+	<script src="../../js/vue-resource.min.js"></script>
+
+	<script>
+		
+		var job_id = "<%= job_id %>";
+		var link = 'http://54.186.228.241:10080/api/v1/job/' + job_id;
+		new Vue ({
+		    el: '#app',
+		    data: {
+		        job_detail: '123',
+		    },
+		    methods:{
+		        getJobDetail: function(){
+		            var res = this.$http.get(link).then(response => {
+		            	this.job_detail = JSON.parse(response.bodyText);
+                    });
+		        }
+		    },
+		    created: function () {
+		        this.getJobDetail();
+		    }
+		});
+	</script>
+
+</body>
+</html>
+	
+</script>
