@@ -48,6 +48,9 @@
                                     	<div v-if="job.status === 'submitted'">
 								          <a :href="'/submitjob/' + job.job_id"><button type="button" class="btn btn-success">修改任务</button></a>
 								        </div>
+								        <div v-else-if="job.status === 'approved'">
+								        	任务完成
+								        </div>
 								        <div v-else>
 								        	<a :href="'/submitjob/' + job.job_id"><button type="button" class="btn btn-success">提交任务</button></a>
 								        </div>
