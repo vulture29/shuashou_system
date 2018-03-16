@@ -83,11 +83,11 @@ def valid_approve_job(conn, job_id):
 
 def valid_publish(conn, new_job):
     cur = conn.cursor()
-    cur.execute("INSERT INTO job VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+    cur.execute("INSERT INTO job VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
                 (new_job.job_id, new_job.item_id, new_job.store_id, new_job.main_img_src, new_job.tao_key,
                  new_job.keyword, new_job.compare_img_src, new_job.sku, new_job.pay_amount,
                  new_job.task_amount, new_job.chat_questions, new_job.comments,
-                 new_job.comment_img_src, new_job.salary, new_job.status, new_job.assign))
+                 new_job.comment_img_src, new_job.salary, new_job.status, new_job.assign, new_job.confirm_img_srcs))
     conn.commit()
     cur.close()
     return True
